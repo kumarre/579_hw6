@@ -1,0 +1,82 @@
+body{
+    font-size: 16px;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 2%;
+    color: #00266B;
+}
+
+h1{
+    font-size: 1.5em;
+}
+
+h2{
+    font-size: 1.3em;
+}
+
+p {
+    font-size: .75em;
+}
+span {
+    font-size: 3em;
+}
+
+#pButton{
+    width: auto;
+    margin-bottom: 5px;
+    flex-basis: 200px;
+    background-color: #ffffff;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+	background-size: 60%;
+	background-position: center;
+}
+#pButton:hover {
+    cursor: pointer;
+}
+
+#progress {
+    width: 300px;
+	height: 10px;
+	background: #007fd4;
+	margin: 10px;
+	border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#playhead{
+	width: 10px;
+	height: 10px;
+	border-radius: 0 10px 10px 0;
+	background: #00266B;
+    position: absolute;
+}
+
+#currentProgress {
+	height: 10px;
+	border-radius: 10px 0 0 10px;
+	background: #00266B;
+}
+
+#album {
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+    background-size: 100%;
+    background-position: center;
+}
+
+.frank {
+    background: url("images/frank.jpg") no-repeat, #00266B;
+}
+
+.rick {
+    background: url("images/rick.jpg") no-repeat, #00266B;
+}

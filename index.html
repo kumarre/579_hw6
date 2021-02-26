@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Problem Set 4</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="howler.js/dist/howler.js" defer></script>
+        <script src="music.js" defer></script>
+        <script src="https://kit.fontawesome.com/0ec2a6e9cb.js" crossorigin="anonymous" defer ></script>
+    </head>
+
+    <body> 
+        <main>
+            <h1>Music Player!</h1>
+
+            <div id="album" class="frank"></div>
+            <div id="albumInfo">
+                <h2 id="song">Fly Me to the Moon</h2>
+                <h3 id="artist">Frank Sinatra</h3>
+            </div>
+
+            <figure>
+                <audio id="music" autoplay="false">
+                    <source src="rick.mp3" type="audio/ogg" />
+                    
+                    Your browser does not support the audio element.
+                </audio>
+            </figure>
+
+            <div id="progress">
+                <div id="currentProgress"></div>
+                <div id="playhead"></div>
+            </div>
+
+            <div class = "controls">
+                <button  id = "pButton" class="play"><span id="playPause" class="fas fa-play-circle"></span></button>
+            </div>        
+        </main>
+    </body>
+</html>
+    
