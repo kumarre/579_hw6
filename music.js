@@ -3,12 +3,13 @@
 
 //Used FontAwesome to create a play and pause button instead of using images
 
+Howler.autoUnlock = false;
 
 const music = new Howl({
 	src: ["rick.mp3"],
 	onplay: function () {
 		requestAnimationFrame(step.bind(this));
-	}.bind(this)
+	}.bind(this),
 });
 let seek = music.seek();
 let started = false;
