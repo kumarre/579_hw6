@@ -8,7 +8,8 @@ const music = new Howl({
 	src: ["rick.mp3"],
 	onplay: function () {
 		requestAnimationFrame(step.bind(this));
-	}.bind(this)
+	}.bind(this),
+	autoplay: false
 });
 let seek = music.seek();
 let started = false;
