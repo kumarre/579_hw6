@@ -1,0 +1,24 @@
+{
+  "name": "579_hw5-copy",
+  "version": "1.0.0",
+  "main": "howler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kumarre/579_hw5.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kumarre/579_hw5/issues"
+  },
+  "homepage": "https://github.com/kumarre/579_hw5#readme",
+  "dependencies": {
+    "howler": "^2.2.1",
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {},
+  "description": ""
+}

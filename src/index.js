@@ -3,14 +3,16 @@
 
 //Used FontAwesome to create a play and pause button instead of using images
 
-Howler.autoUnlock = false;
+// Howler.autoUnlock = false;
+import {Howl} from 'howler';
 
 const music = new Howl({
-	src: ["rick.mp3"],
+	src: ["assets/rick.mp3"],
 	onplay: function () {
-		requestAnimationFrame(step.bind(this));
-	}.bind(this),
+		requestAnimationFrame(step);
+	},
 });
+
 let seek = music.seek();
 let started = false;
 
@@ -51,10 +53,19 @@ function rickRoll() {
 }
 
 function step() {
-	let self = this;
+	// let self = this;
 	
-	playhead.style.marginLeft = ((seek / music.duration()) * 100) + '%';
- 
+	seek = music.seek();
+
+	console.log("hello");
+
+	let percentage = ((seek / music.duration()) * 100) + '%';
+	
+	console.log(percentage);
+	console.log(seek);
+	console.log(music.duration());
+
+	playhead.style.marginLeft = percentage;
 
 	let playheadStyle = window.getComputedStyle(document.getElementById("playhead"));
  	let p = playheadStyle.getPropertyValue('margin-left');
@@ -62,7 +73,7 @@ function step() {
 
 	// If the sound is still playing, continue stepping.
 	if (music.playing()) {
-	  requestAnimationFrame(self.step.bind(self));
+		requestAnimationFrame(step);
 	}
  
 }
