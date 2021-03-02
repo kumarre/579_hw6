@@ -3367,19 +3367,18 @@ function step() {
 	
 	seek = music.seek();
 
-	console.log("hello");
-
-	let percentage = ((seek / music.duration()) * 100) + '%';
+	// how much of the song we've gone through
+	// let ratio = seek / music.duration();
+	let ratio = seek / music.duration();
 	
-	console.log(percentage);
-	console.log(seek);
-	console.log(music.duration());
 
-	playhead.style.marginLeft = percentage;
+	
+ 	// let place = ratio * 300;
+	playhead.style.marginLeft = (ratio * 100) + "%";
 
 	let playheadStyle = window.getComputedStyle(document.getElementById("playhead"));
  	let p = playheadStyle.getPropertyValue('margin-left');
- 	currentProgress.style.width = p;
+	currentProgress.style.width = p;
 
 	// If the sound is still playing, continue stepping.
 	if (music.playing()) {
@@ -3389,7 +3388,6 @@ function step() {
 }
 
 playPause.addEventListener("click", playAudio);
-
 })();
 
 /******/ })()
